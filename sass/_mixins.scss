@@ -1,0 +1,89 @@
+
+@mixin anim{
+	transition: all .3s ease;
+}
+@mixin anim-linear{
+	transition: all .3s linear;
+}
+
+// Button sizes
+@mixin btn-size($padding-vertical, $padding-horizontal, $font-size, $line-height) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+
+/*FONTS*/
+@mixin gsb {font-family: 'Gilroy Semibold',sans-serif;}
+@mixin gb {font-family: 'Gilroy Bold',sans-serif;}
+@mixin fl {font-family: 'Museo Sans 300 Light',sans-serif;}
+@mixin fm {font-family: 'Museo Sans 500 Medium',sans-serif;}
+@mixin fb {font-family: 'Museo Sans 700 Bold',sans-serif;}
+@mixin fxb {font-family: 'Museo Sans 900 Black',sans-serif;}
+
+/*images*/
+
+@mixin cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%; }
+
+
+  // vertical-align at center
+@mixin vcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); }
+
+
+
+
+/*=======================START-MEDIA=====================*/
+@mixin r($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content; } }
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width+ "px") {
+    @content; } }
+
+/*=======================END-MEDIA=====================*/
+//placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }
+}
+
+
+
+@mixin css-lock($min-size: 1, $max-size: 1.4, $min-width: 20, $max-width: 100, $property: font-size, $unit: px) {
+  #{$property}: #{$max-size}#{$unit};
+  #{$property}: calc(#{$min-size}#{$unit} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}#{$unit}) / (#{$max-width} - #{$min-width})));
+  @media (max-width: #{$min-width}#{$unit}) {
+    #{$property}: #{$min-size}#{$unit}; }
+  @media (min-width: #{$max-width}#{$unit}) {
+    #{$property}: #{$max-size}#{$unit}; } }
+
+//border-radius
+@mixin brad {
+  border-bottom-left-radius: 5em;
+}
+
+/*=======================START-SIZE=====================*/
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+/*=======================START-SIZE=====================*/
+
+/*=======================START-MULTI-TRANSITION=====================*/
+@mixin multi-transition($transition, $properties-list...) {
+  transition-duration: $transition;
+  //transition-timing-function: ease-in-out;
+  transition-property: $properties-list;
+}
+/*=======================START-MULTI-TRANSITION=====================*/

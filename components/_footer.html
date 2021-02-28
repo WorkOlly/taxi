@@ -1,0 +1,89 @@
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-wrap round-corner">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col footer-logo"><img src="images/logo.svg" alt=""/></div>
+            <div class="footer-social-mobile"><a class="footer-social__item" href="#" aria-label="link to facebook page">
+                <svg class="icon icon-fb ">
+                  <use xlink:href="i/sprite/sprite.svg#fb"></use>
+                </svg></a><a class="footer-social__item" href="#" aria-label="link to instagram page">
+                <svg class="icon icon-inst ">
+                  <use xlink:href="i/sprite/sprite.svg#inst"></use>
+                </svg></a></div>
+            <div class="footer-col footer-nav">
+              <ul class="footer-nav__list">
+                <li><a class="footer-nav__item" href="#">Партнерам</a></li>
+                <li><a class="footer-nav__item" href="#">Бизнесу</a></li>
+                <li><a class="footer-nav__item" href="#">Автопаркам</a></li>
+                <li><a class="footer-nav__item" href="#">Новости</a></li>
+                <li><a class="footer-nav__item" href="#">Промокоды</a></li>
+                <li><a class="footer-nav__item" href="#">Контакты</a></li>
+                <li><a class="footer-nav__item" href="#">Условия использования</a></li>
+              </ul>
+            </div>
+            <div class="footer-col footer-app"><a class="footer-app__item" href="#" aria-label="link to google play market"><img src="images/google-play.svg" alt=""/></a><a class="footer-app__item" href="#" aria-label="link to app store"><img src="images/app-store.svg" alt=""/></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5 col-xs-12">
+              <div class="footer-copy">©&nbsp;<span class="year">2020&nbsp;</span>- Taxi 838</div>
+            </div>
+            <div class="col-sm-2 col-xs-12">
+              <div class="footer-social"><a class="footer-social__item" href="#" aria-label="link to facebook">
+                  <svg class="icon icon-fb ">
+                    <use xlink:href="i/sprite/sprite.svg#fb"></use>
+                  </svg></a><a class="footer-social__item" href="#" aria-label="link to instagram">
+                  <svg class="icon icon-inst ">
+                    <use xlink:href="i/sprite/sprite.svg#inst"></use>
+                  </svg></a></div>
+            </div>
+            <div class="col-sm-5 col-xs-12">
+              <div class="footer-develop">Разработка и поддержка сайта —&nbsp;<a href="http://artjoker.ua" target="_blank" rel="noopener" aria-label="link to site">
+                  <svg class="icon icon-develop ">
+                    <use xlink:href="i/sprite/sprite.svg#develop"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="page-overlay"></div>
+<div class="modal" id="modalAuth">
+  <form class="modal__inner js_validate" name="modal-form" action="#">
+    <div class="h3-title">Авторизация</div><span class="h5-title">Для заказа такси укажите свой номер телефона</span><span class="modal__text">Вы получите СМС с кодом</span>
+    <div class="form-field input-field" data-error="Обязательное поле">
+      <input class="form-control" name="phone" type="tel" placeholder="+38 (0__) ___ __ __" data-validate="phone" data-error-wrong="Заполните поле полностью" required=""/>
+    </div>
+    <button class="btn main-btn" type="submit">Отправить</button>
+  </form>
+</div>
+<div class="modal modal-auth-code" id="modalAuthCode">
+  <form class="modal__inner js_validate" name="modal-form">
+    <div class="h3-title">Авторизация</div>
+    <div class="h5-title">Введите код</div>
+    <div class="modal__row form-field input-field" data-error="Введите код">
+      <div class="input-group">
+        <input class="form-control js_input-code" name="code1" type="number" maxlength="1" data-validate="code" required=""/>
+        <input class="form-control js_input-code" name="code2" type="number" maxlength="1" data-validate="code" required=""/>
+        <input class="form-control js_input-code" name="code3" type="number" maxlength="1" data-validate="code" required=""/>
+        <input class="form-control js_input-code" name="code4" type="number" maxlength="1" data-validate="code" required=""/>
+      </div>
+      <button class="btn main-btn" type="submit">Отправить</button>
+    </div>
+    <div class="send-more"><span>Не получили код? <a class="send-more__link" href="#">Отправить еще раз</a></span></div>
+  </form>
+</div>
+<div class="modal modal-thank js_modal" id="modalThank">
+  <div class="modal__inner">
+    <div class="h2-title">Спасибо!</div><span class="h4-title">Ваша заявка отправлена.</span><span class="h4-title">Мы свяжемся с Вами в ближайшее время</span>
+    <button class="btn main-btn js_btn-close-modal" type="submit">Ок</button>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.conditions {
+  &-section {
+    padding-top: 70px;
+    padding-bottom: 120px;
+    color: $dark-blue;
+    @include r(767) {
+      padding-top: 32px;
+      padding-bottom: 60px;
+    }
+  }
+  &-wrapper {
+    max-width: 938px;
+  }
+  &-title {
+    margin-bottom: 40px;
+  }
+  &-content {
+    margin-bottom: 60px;
+    @include r(767) {
+      margin-bottom: 24px;
+    }
+  }
+}

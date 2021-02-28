@@ -1,0 +1,137 @@
+.xdsoft_datetimepicker {
+  width: 400px;
+  padding: 0;
+  border: 1px solid #D9DEE2;
+  border-radius: 4px;
+  @include r(834) {
+    width: 347px;
+  }
+  @include r(768) {
+    width: 433px;
+  }
+  @include r(480) {
+    width: 416px;
+  }
+  @include r(414) {
+    width: 350px;
+  }
+  @include r(375) {
+    width: 311px;
+  }
+  @include r(360) {
+    width: 296px;
+  }
+  @include r(320) {
+    width: 256px;
+  }
+  .xdsoft_datepicker {
+    width: 100%;
+    padding: 12px;
+    margin: 0;
+  }
+  .xdsoft_calendar {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    td {
+      @include fl;
+      font-size: 14px;
+      border: 0 !important;
+      background: #F0F1F3;
+      color: $h-text !important;
+
+      &:hover {
+        background: $yellow !important;
+        color: $dark-blue !important;
+      }
+    }
+    .xdsoft_current,
+    .xdsoft_today {
+      background: $yellow !important;
+      box-shadow: none !important;
+      color: $dark-blue !important;
+      font-family: 'Museo Sans 300 Light',sans-serif !important;
+    }
+  }
+  thead {
+    display: none;
+  }
+
+  .xdsoft_month {
+    order: 1;
+    width: 83px;
+    text-align: left;
+    color: $dark-blue;
+    &:hover {
+      span {
+        text-decoration: none !important;
+      }
+    }
+  }
+
+  .xdsoft_year {
+    color: $dark-blue;
+    &:hover {
+      span {
+        text-decoration: none !important;
+      }
+    }
+  }
+
+  .xdsoft_label>.xdsoft_select {
+    border: 0;
+    background: #F0F1F3;
+    border-radius: 4px;
+  }
+
+
+  .xdsoft_label {
+    height: 100%;
+  }
+
+  .xdsoft_label>.xdsoft_select>div>.xdsoft_option {
+    padding: 6px 10px;
+    @include fl;
+    color: $h-text;
+
+    &:hover {
+      background: $yellow;
+      color: $dark-blue;
+    }
+    &.xdsoft_current {
+      background: $yellow;
+      color: $dark-blue;
+      box-shadow: none;
+    }
+  }
+
+}
+.xdsoft_datetimepicker .blue-gradient-button {
+  height: initial;
+  padding: 10px;
+  margin-top: 12px;
+  font-family: 'Museo Sans 500 Medium',sans-serif;
+  font-size: 14px;
+  color: $dark-blue !important;
+  background: $yellow;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid transparent!important;
+  &:hover {
+    background: $yellow;
+  }
+}
+
+.xdsoft_scrollbar {
+  width: 1px;
+  .xdsoft_scroller {
+    background: $yellow !important;
+  }
+}
+
+.xdsoft_today_button,
+.xdsoft_prev,
+.xdsoft_next {
+  display: none !important;
+}

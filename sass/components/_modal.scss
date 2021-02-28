@@ -1,0 +1,129 @@
+.modal {
+  display: none;
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px;
+  text-align: center;
+  background-color: $white;
+  box-shadow: 0 15px 55px rgba(67, 75, 103, .1);
+  border-bottom-right-radius: 3.5em;
+
+  @include r(768) {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 16px;
+  }
+}
+
+.modal:not(.modal-auth-code) {
+  .input-field {
+    max-width: 330px;
+    margin: 0 auto 21px;
+  }
+}
+
+.modal__inner {
+
+  .h3-title {
+    margin-bottom: 24px;
+    line-height: 1.125;
+  }
+  .h5-title {
+    margin-bottom: 24px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 330px;
+  }
+}
+
+.modal__text {
+  display: block;
+  margin-bottom: 36px;
+}
+
+.fancybox-slide--html {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.fancybox-bg {
+  background: rgba($dark-blue, .3);
+}
+
+.fancybox-is-open .fancybox-bg {
+  opacity: 1;
+}
+.fancybox-slide--html .fancybox-close-small {
+  top: 18px;
+  right: 18px;
+  @include size(35px);
+  padding: 0;
+  color: $h-text;
+}
+
+.modal__row {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 208px 207px;
+  justify-content: center;
+  margin-bottom: 50px;
+  @include r(768) {
+    grid-column-gap: 0;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 30px;
+  }
+}
+
+.modal-auth-code {
+  .h3-title {
+    @include rmin(769) {
+      margin-bottom: 50px;
+    }
+  }
+  .h5-title {
+    @include rmin(769) {
+      margin-bottom: 27px;
+    }
+  }
+
+  .input-group {
+    @include r(768) {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .btn {
+    @include r(768) {
+      max-width: 195px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.modal-thank {
+  padding-top: 88px;
+  padding-bottom: 87px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 3.5em;
+  box-shadow: 0 15px 55px rgba(67, 75, 103, .1);
+
+  .btn {
+    max-width: 248px;
+  }
+  .h2-title {
+    margin-bottom: 30px;
+  }
+
+  .h4-title:first-of-type {
+    margin-bottom: 0;
+  }
+
+  .h4-title:last-of-type {
+    margin-bottom: 45px;
+  }
+}

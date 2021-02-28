@@ -1,0 +1,37 @@
+.location {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @include r(960) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &-title {
+    display: block;
+    color: $dark-blue;
+    line-height: 1.25;
+    margin-bottom: 30px;
+    @include gb;
+  }
+  &-cities {
+    max-width: 850px;
+    &__item {
+      display: inline-block;
+      font-size: 10px;
+      line-height: 1.4;
+      text-transform: uppercase;
+      padding: 9px 12px;
+      margin-right: 5px;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      color: $dark-blue;
+      background: #F0F1F3;
+      border-radius: 86px;
+      @include anim;
+      &:hover {
+        background: $yellow;
+        filter: drop-shadow(0px 4px 4px rgba(52, 66, 79, 0.16))
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.mobile-app {
+  background: $yellow;
+  border-top-right-radius: 56px;
+  margin-bottom: 16px;
+  @include r(767) {
+    margin-bottom: 10px;
+    border-top-right-radius: 0;
+  }
+  &__invite {
+    display: flex;
+    align-items: center;
+    @include r(929) {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+  &__wrap {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @include r(929) {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  &__item {
+    @include r(767) {
+      margin-bottom: 16px;
+    }
+    &:first-of-type {
+      margin-right: 16px;
+      @include r(350) {
+        margin-right: 0;
+      }
+    }
+    img {
+      height: 50px;
+    }
+  }
+  &__img {
+    display: flex;
+    justify-content: flex-end;
+    @include r(929) {
+      flex-basis: 100%;
+      max-width: 100%;
+      justify-content: center;
+      order: -1;
+    }
+    img {
+      margin-top: -100px;
+      margin-bottom: 20px;
+      @include r(767) {
+        max-width: 65%;
+        margin-top: -3.5em;
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+.news{
+  &-banner {
+    padding-top: 70px;
+    padding-bottom: 130px;
+    @include r(767) {
+      padding-top: 32px;
+      padding-bottom: 74px;
+    }
+    .h2-title {
+      color: inherit;
+    }
+  }
+  &-section {
+    margin-top: -100px;
+    @include r(767) {
+      margin-top: -42px;
+    }
+    .col-news {
+      margin-bottom: 30px;
+      @include r(899) {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+      @include r(767) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  &-row {
+    margin-bottom: 30px;
+    @include r(767) {
+      margin-bottom: 24px;
+    }
+  }
+  &-item {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 45% 1fr;
+    grid-template-rows: max-content;
+    gap: 16px 50px;
+    padding: 18px;
+    background: $white;
+    border: 1px solid $light-grey;
+    border-top-right-radius: 69px;
+    color: $dark-blue;
+    @include r(1440) {
+      grid-template-columns: 30% 1fr;
+      gap: 16px 20px;
+    }
+    @include r(599) {
+      gap: 10px 20px;
+    }
+    p {
+      @include r(1199) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      @include r(899) {
+        grid-column-start: auto;
+      }
+      @include r(599) {
+        grid-column-start: 1;
+      }
+    }
+    .h4-title {
+      margin-bottom: 0;
+    }
+  }
+  &-img {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    @include  r(1199) {
+      grid-row-end: auto;
+    }
+    @include r(899) {
+      grid-row-end: 3;
+    }
+    @include r(599) {
+      grid-row-end: auto;
+    }
+  }
+  &-date {
+    display: block;
+    color: $primary-text;
+    margin-bottom: 16px;
+    @include r(767) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.pagination {
+  font-size: 20px;
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  &-wrap {
+    text-align: center;
+  }
+  &-arrow {
+    font-size: 12px;
+    padding-right: 9px;
+    padding-left: 9px;
+    .icon {
+      font-size: inherit;
+      color: $h-text;
+    }
+  }
+  li {
+    display: inline-block;
+    padding-left: 18px;
+    padding-right: 18px;
+    @include fb;
+  }
+
+  a {
+    color: $dark-blue;
+  }
+  .active span {
+    color: $blue;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: $yellow;
+      bottom: 0;
+    }
+  }
+}

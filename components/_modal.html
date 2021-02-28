@@ -1,0 +1,32 @@
+
+<div class="modal" id="modalAuth">
+  <form class="modal__inner js_validate" name="modal-form" action="#">
+    <div class="h3-title">Авторизация</div><span class="h5-title">Для заказа такси укажите свой номер телефона</span><span class="modal__text">Вы получите СМС с кодом</span>
+    <div class="form-field input-field" data-error="Обязательное поле">
+      <input class="form-control" name="phone" type="tel" placeholder="+38 (0__) ___ __ __" data-validate="phone" data-error-wrong="Заполните поле полностью" required=""/>
+    </div>
+    <button class="btn main-btn" type="submit">Отправить</button>
+  </form>
+</div>
+<div class="modal modal-auth-code" id="modalAuthCode">
+  <form class="modal__inner js_validate" name="modal-form">
+    <div class="h3-title">Авторизация</div>
+    <div class="h5-title">Введите код</div>
+    <div class="modal__row form-field input-field" data-error="Введите код">
+      <div class="input-group">
+        <input class="form-control js_input-code" name="code1" type="number" maxlength="1" data-validate="code" required=""/>
+        <input class="form-control js_input-code" name="code2" type="number" maxlength="1" data-validate="code" required=""/>
+        <input class="form-control js_input-code" name="code3" type="number" maxlength="1" data-validate="code" required=""/>
+        <input class="form-control js_input-code" name="code4" type="number" maxlength="1" data-validate="code" required=""/>
+      </div>
+      <button class="btn main-btn" type="submit">Отправить</button>
+    </div>
+    <div class="send-more"><span>Не получили код? <a class="send-more__link" href="#">Отправить еще раз</a></span></div>
+  </form>
+</div>
+<div class="modal modal-thank js_modal" id="modalThank">
+  <div class="modal__inner">
+    <div class="h2-title">Спасибо!</div><span class="h4-title">Ваша заявка отправлена.</span><span class="h4-title">Мы свяжемся с Вами в ближайшее время</span>
+    <button class="btn main-btn js_btn-close-modal" type="submit">Ок</button>
+  </div>
+</div>

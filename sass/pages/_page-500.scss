@@ -1,0 +1,17 @@
+.error {
+  &-img {
+   &__text {
+     position: absolute;
+     top: 8%;
+     left: 50%;
+     transform: translateX(-50%);
+     font-size: 20px;
+     line-height: 1.2;
+     color: $h-text;
+     @include fb;
+     @include r(600) {
+       top: 20%;
+     }
+   }
+  }
+}

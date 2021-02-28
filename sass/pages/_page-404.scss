@@ -1,0 +1,78 @@
+.error {
+  &-section {
+    padding-top: 54px;
+    padding-bottom: 53px;
+    margin-bottom: 16px;
+
+    .h2-title {
+      margin-top: 26px;
+      margin-bottom: 30px;
+      @include r(767) {
+        text-align: center;
+      }
+    }
+    .btn {
+      padding: 17px 69px;
+      margin-bottom: 24px;
+      width: max-content;
+    }
+  }
+  &-wrap {
+    padding: 143px 80px 0 216px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include r(1280) {
+      padding: 115px 80px 0 115px;
+    }
+    @include r(993) {
+      padding: 60px 60px 0 60px;
+    }
+    @include r(767) {
+      padding: 24px 15px 0 15px;
+    }
+  }
+  &-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    @include r(1280) {
+      width: 60%;
+    }
+    @include r(767) {
+      width: 100%;
+      align-items: center;
+    }
+  }
+  &-about {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    @include fb;
+    @include r(767) {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 18px;
+    }
+  }
+  &-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    @include r(1280) {
+      width: 40%;
+    }
+    @include r(767) {
+      width: 100%;
+      max-height: 350px;
+    }
+    @include r(600) {
+      max-height: 250px;
+    }
+    img {
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+}
